@@ -1,0 +1,28 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800i" rel="stylesheet">
+    <link rel="stylesheet" href="app.css"/>
+    <title>Déclarachon - Simulateur d'impôts France Insoumise - JLM2017 </title>
+</head>
+<body>
+<div id="app">
+    <h2>En 2017, j'ai déclaré</h2>
+    <input v-model="revenu" placeholder="Mon quotient familial 2016" class="revenu" type="number"/>
+    <input v-model="parts" placeholder="Parts" class="parts" type="number"/>
+    <div class="impots">
+        <div class="impots__result">{{ actuels }}€
+            <small>2017</small>
+        </div>
+        <div class="impots__result">{{ insoumis }}€
+            <small>Insoumis</small>
+        </div>
+    </div>
+    <aside>
+        Calcul simplifié ne prenant pas en compte les réductions possibles.
+    </aside>
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+<script src="app.js"></script>
+</html>
